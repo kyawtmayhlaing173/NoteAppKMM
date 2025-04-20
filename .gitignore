@@ -1,0 +1,82 @@
+# General
+*.log
+*.iml
+*.ipr
+*.iws
+.DS_Store
+*.swp
+.idea/
+*.kts
+build/
+out/
+.gradle/
+.npm/
+.node_modules/
+**/.gradle/
+**/build/
+**/out/
+**/*.log
+
+# Kotlin/Native
+**/*.kexe
+**/*.klib
+
+# Android
+**/*.apk
+**/*.ap_
+**/*.dex
+**/*.class
+**/gen/
+**/local.properties
+**/proguard/
+**/lint/
+**/androidApp/release/
+**/androidApp/debug/
+
+# iOS
+**/iosApp/Pods/
+**/iosApp/iosApp.xcworkspace/
+**/iosApp/iosApp.xcodeproj/xcuserdata/
+**/iosApp/iosApp.xcodeproj/project.xcworkspace/
+**/iosApp/iosApp.xcodeproj/xcshareddata/
+**/DerivedData/
+**/iosApp/iosApp/build/
+
+# JVM
+**/jvmApp/build/
+**/jvmApp/.gradle/
+
+# JS
+**/jsApp/build/
+**/jsApp/node_modules/
+**/jsApp/.parcel-cache/
+**/jsApp/dist/
+
+# KMM Shared
+**/shared/build/
+**/shared/.cxx/
+**/shared/.konan/
+
+# Gradle
+.gradle/
+!gradle-wrapper.jar
+gradle.properties
+gradle-app.setting
+!gradle-wrapper.properties
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# KSP (Kotlin Symbol Processing)
+**/build/generated/ksp/
+
+# KMM Resources
+**/shared/src/commonMain/resources/META-INF/**
+
+# Cache
+.cache/
+.kotlin/
+.kotlin-native/
