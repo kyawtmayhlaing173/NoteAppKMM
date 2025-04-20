@@ -40,10 +40,11 @@ struct NoteListScreen: View {
                                 }
                             Image(systemName: "plus")
                                 .onTapGesture {
-                                    router.showScreen(.sheet) { _ in
+                                    router.showScreen(.push) { _ in
                                         NoteDetailScreen(
                                             noteId: nil,
-                                            noteDataSource: noteDataSource, onDismissed: {
+                                            noteDataSource: noteDataSource,
+                                            onDismissed: {
                                                 Task {
                                                     await viewModel.loadNotes()
                                                 }
@@ -76,7 +77,9 @@ struct NoteListScreen: View {
                                             noteId: note.id?.int64Value,
                                             noteDataSource: noteDataSource,
                                             onDismissed: {
-                                                await viewModel.loadNotes()
+                                                Task {
+                                                    await viewModel.loadNotes()
+                                                }
                                             }
                                         )
                                     }
